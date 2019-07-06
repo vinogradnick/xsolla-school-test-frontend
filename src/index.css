@@ -1,13 +1,168 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f5f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+main {
+    display: flex;
+    flex-direction: row;
+
+}
+
+table {
+    margin: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+
+table th {
+    padding: 10px;
+    width: 200px;
+}
+
+
+table td {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+
+}
+
+table tr:hover {
+    background-color: #80d0d0;
+}
+
+.list-item {
+    background: #fff;
+    box-shadow: 0 1px 2px #999;
+    font-family: sans-serif;
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    margin: 10px 0;
+    padding: 20px 10px;
+    text-align: center;
+    transform: translateZ(0);
+    transition: box-shadow 0.25s ease-in;
+    width: 500px;
+
+}
+
+.list-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+.bold {
+    font-weight: 800;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    text-align: center;
+    margin: 30px;
+}
+
+.filter-box {
+
+    margin: 30px;
+    padding: 10px 10px 10px 30px;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 320px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: black;
+}
+
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+    width: 320px;
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+label {
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 320px;
+}
+
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: black;
+    transition: 300ms ease all;
+    left: 0%;
+}
+.chartix{
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: snow;
 }
