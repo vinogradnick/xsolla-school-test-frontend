@@ -9,7 +9,7 @@ class ChartBox extends Component {
     }
 
     getRandomColor() {
-        return '#'+Math.floor(Math.random()*16777215).toString(16);
+        return '#' + Math.floor(Math.random() * 16777215).toString(16);
     }
 
     render() {
@@ -18,7 +18,7 @@ class ChartBox extends Component {
         return (
             <div className="chartix">
                 <h3> График популярности платежных систем</h3>
-                <LineChart
+                {data.length!==0 ? (<LineChart
                     width={500}
                     height={600}
                     data={data}
@@ -37,7 +37,8 @@ class ChartBox extends Component {
                                                                                                dataKey={el}/>)}
 
 
-                </LineChart>
+                </LineChart>) : (<p> Пусто</p>)}
+
             </div>
         );
     }
